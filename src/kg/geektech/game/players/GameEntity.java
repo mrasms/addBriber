@@ -3,14 +3,14 @@ package kg.geektech.game.players;
 public abstract class GameEntity {
     private int health;
     private int damage;
-    private int corruptionPoints;
+    private int justicePoints;
 
-    public int getCorruptionPoints() {
-        return corruptionPoints;
+    public int getJusticePoints() {
+        return justicePoints;
     }
 
-    public void setCorruptionPoints(int corruptionPoints) {
-        this.corruptionPoints = corruptionPoints;
+    public void setJusticePoints(int justicePoints) {
+        this.justicePoints = justicePoints;
     }
 
     public GameEntity(int health, int damage) {

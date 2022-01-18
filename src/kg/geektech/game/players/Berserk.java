@@ -9,7 +9,7 @@ public class Berserk extends Hero {
 
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-        this.setCorruptionPoints(RPG_Game.random.nextInt(10)+2);
+        this.setJusticePoints(RPG_Game.random.nextInt(10)+2);
         if (boss.getDamage() != 0) {
             int number = RPG_Game.random.nextInt(boss.getDamage()) + 1;
             if (boss.getHealth() > 0 && this.getHealth() > 0)

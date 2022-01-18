@@ -25,7 +25,7 @@ public class Avrora extends Hero {
     }
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-        this.setCorruptionPoints(RPG_Game.random.nextInt(10)+2);
+        this.setJusticePoints(RPG_Game.random.nextInt(10)+2);
         avrorasAbility();
             if (this.getHealth() > 0 && avrorasAbilityWasUsed <= 2 && avrorasAbilityWasUsed !=0){
                 this.setHealth(boss.getDamage() + this.getHealth());

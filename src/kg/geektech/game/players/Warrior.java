@@ -9,7 +9,7 @@ public class Warrior extends Hero {
 
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-        this.setCorruptionPoints(RPG_Game.random.nextInt(10)+2);
+        this.setJusticePoints(RPG_Game.random.nextInt(10)+2);
         int number = RPG_Game.random.nextInt(3) + 1;
             if (this.getHealth() > 0 && boss.getHealth() > 0) {
                 boss.setHealth((boss.getHealth()+ this.getDamage()) - this.getDamage() * number);

@@ -43,8 +43,8 @@ public class RPG_Game {
         Druid druid = new Druid(250, 20,Names.DRUID);
         Hacker hacker = new Hacker(250,15,Names.HACKER);
         TrickyBastard bastard = new TrickyBastard(200, 20, Names.TRICKY_BASTARD);
-        CorruptOfficial briber = new CorruptOfficial(150,3,Names.CORRUPT_OFFICIAL);
-        Hero[] heroes = {warrior, doctor, magic, berserk, golem, intern, thor, witcher, avrora, druid, hacker, bastard, briber};
+        Judge judge = new Judge(150,3,Names.JUDGE);
+        Hero[] heroes = {warrior, doctor, magic, berserk, golem, intern, thor, witcher, avrora, druid, hacker, bastard, judge};
 
 
         printStatistics(heroes, boss);

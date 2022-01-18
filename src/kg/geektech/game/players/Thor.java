@@ -17,7 +17,7 @@ public class Thor extends Hero {
     }
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-        this.setCorruptionPoints(RPG_Game.random.nextInt(10)+2);
+        this.setJusticePoints(RPG_Game.random.nextInt(10)+2);
         if (this.getHealth() > 0 && (thorWillHit() == 1)){
                 boss.setDamage(0);
             } else boss.setDamage(50);
