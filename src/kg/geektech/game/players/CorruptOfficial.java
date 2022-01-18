@@ -10,13 +10,13 @@ public class CorruptOfficial extends Hero {
 
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-        this.setCorruptionPoints(RPG_Game.random.nextInt(50)+10);
+        this.setCorruptionPoints(RPG_Game.random.nextInt(10)+2);
         for (int i = 0; i < heroes.length ; i++) {
 
             if (this.getCorruptionPoints() >= heroes[i].getCorruptionPoints() && this.getCorruptionPoints() >= boss.getCorruptionPoints()) {
             this.setHealth(this.getHealth()+ heroes[i].getCorruptionPoints()/10);
             heroes[i].setHealth(heroes[i].getHealth()-(getCorruptionPoints()/2));
-            this.setDamage(this.getDamage()+ this.getDamage()/ boss.getCorruptionPoints()/10);
+            this.setDamage(this.getDamage()+ this.getDamage()/ (boss.getCorruptionPoints()/10));
             }
             else if (heroes[i].getCorruptionPoints()>this.getCorruptionPoints() && heroes[i].getCorruptionPoints()>= boss.getCorruptionPoints()){
                 heroes[i].setHealth(heroes[i].getHealth() + (boss.getCorruptionPoints()/2));
@@ -25,6 +25,7 @@ public class CorruptOfficial extends Hero {
             }
             else if (boss.getCorruptionPoints()>=heroes[i].getCorruptionPoints() && boss.getCorruptionPoints()> this.getCorruptionPoints()){
                 heroes[i].setHealth(heroes[i].getHealth() - (boss.getCorruptionPoints() - heroes[i].getCorruptionPoints()));
+                boss.setDamage(boss.getDamage()+(heroes[i].getCorruptionPoints()/2));
                 this.setHealth(this.getHealth() + ((boss.getCorruptionPoints()+heroes[i].getCorruptionPoints())/10));
             }
         }

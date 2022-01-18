@@ -11,7 +11,7 @@ private static int ability;
 
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-        this.setCorruptionPoints(RPG_Game.random.nextInt(50));
+        this.setCorruptionPoints(RPG_Game.random.nextInt(10)+2);
         int number = RPG_Game.random.nextInt(boss.getDamage()+1);
         if (ability==0){
             ability++;

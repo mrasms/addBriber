@@ -21,7 +21,7 @@ public class Medic extends Hero {
 
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-        this.setCorruptionPoints(RPG_Game.random.nextInt(50));
+        this.setCorruptionPoints(RPG_Game.random.nextInt(10)+2);
         if (RPG_Game.getMedicIsAlive()>=1 && RPG_Game.getMedicIsAlive()<=2){
             int number = RPG_Game.random.nextInt(this.getHealPoints()) + 1;
             this.setHealPoints(this.getHealPoints()+number);

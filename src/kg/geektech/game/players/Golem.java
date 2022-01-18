@@ -9,7 +9,7 @@ public class Golem extends Hero {
 
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-        this.setCorruptionPoints(RPG_Game.random.nextInt(50));
+        this.setCorruptionPoints(RPG_Game.random.nextInt(10)+2);
         if (boss.getHealth() > 0 && boss.getDamage() !=0 && this.getHealth() > 0){
                 this.setHealth((this.getHealth() -  ((boss.getDamage() / 5) * (RPG_Game.getAliveHeroes()-1))));
                 boss.setDamage((boss.getDamage()/5) * 4); //RPG_Game.getAliveHeroes()-1);

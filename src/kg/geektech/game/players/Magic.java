@@ -9,7 +9,7 @@ public class Magic extends Hero {
 
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-        this.setCorruptionPoints(RPG_Game.random.nextInt(50));
+        this.setCorruptionPoints(RPG_Game.random.nextInt(10)+2);
         int number = RPG_Game.random.nextInt(5) + 1;
         for (int i = 0; i < heroes.length; i++) {
             if (heroes[i].getHealth() > 0 && this != heroes[i] && heroes[i].getName()!= Names.WITCHER)

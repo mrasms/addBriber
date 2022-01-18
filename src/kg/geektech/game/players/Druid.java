@@ -32,7 +32,7 @@ public class Druid extends Hero {
     }
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-        this.setCorruptionPoints(RPG_Game.random.nextInt(50));
+        this.setCorruptionPoints(RPG_Game.random.nextInt(10)+2);
         druidsAbility();
         whoWillCall(); // если 1 то вызываем ворона, а если 0 то вызываем ангела
         if (this.getHealth() > 0 && druidsAbilityWasUsed == 1) {

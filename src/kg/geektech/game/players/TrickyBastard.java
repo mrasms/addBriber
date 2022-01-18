@@ -19,7 +19,7 @@ public class TrickyBastard extends Hero {
 
     @Override
     public void applySuperPower(Hero[] heroes, Boss boss) {
-        this.setCorruptionPoints(RPG_Game.random.nextInt(50));
+        this.setCorruptionPoints(RPG_Game.random.nextInt(10)+2);
         if (bastardWillHit()==1 && this.getHealth()>0){
             this.setHealth(this.getHealth()+ boss.getDamage());
             boss.setHealth(boss.getHealth()+this.getDamage());
