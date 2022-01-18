@@ -16,7 +16,7 @@ public class CorruptOfficial extends Hero {
             if (this.getCorruptionPoints() >= heroes[i].getCorruptionPoints() && this.getCorruptionPoints() >= boss.getCorruptionPoints()) {
             this.setHealth(this.getHealth()+ heroes[i].getCorruptionPoints()/10);
             heroes[i].setHealth(heroes[i].getHealth()-(getCorruptionPoints()/2));
-            this.setDamage(this.getDamage()+ this.getDamage()/ (boss.getCorruptionPoints()/10));
+            this.setDamage(this.getDamage()+ 1);
             }
             else if (heroes[i].getCorruptionPoints()>this.getCorruptionPoints() && heroes[i].getCorruptionPoints()>= boss.getCorruptionPoints()){
                 heroes[i].setHealth(heroes[i].getHealth() + (boss.getCorruptionPoints()/2));
